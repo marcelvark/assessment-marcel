@@ -1,0 +1,27 @@
+@import '../../styles.scss';
+
+$link_hover_color: #fff;
+
+nav {
+	background: color-mix(in srgb, $dark_color, #fff 90%);
+	border-right: 2px solid color-mix(in srgb, $dark_color, #fff 85%);  
+
+    // Align navbar links
+	display: flex;
+	flex-direction: column;
+	min-height: 100%;
+
+    // Add a bit of whitespace before the links
+    padding: $large_padding 0;
+
+	a {
+		font-weight: bold;
+		padding: $medium_padding $large_padding;
+
+		&:hover {
+            // Highlight navbar links
+            background: $link_hover_color;
+			text-decoration: none;
+		}
+	}
+}

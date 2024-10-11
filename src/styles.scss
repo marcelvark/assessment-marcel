@@ -1,1 +1,90 @@
-/* You can add global styles to this file, and also import other style files */
+$background_color: #fff;
+$dark_color: #345;
+$text_color: #333;
+
+$link_color: #39e;
+$link_color_underline: #39e7;
+$link_color_light: #fff;
+$link_color_light_underline: #fff7;
+
+$label_color: #999;
+$error_color: #c33;
+
+$font: system-ui;
+
+$button_color_top: #7b2;
+$button_color_bottom: #591;
+$button_color_text: #fff;
+
+$input_border_color: #bbb;
+$input_shading_color: #eee;
+
+$large_padding: 1.0rem;
+$medium_padding: 0.5rem;
+$small_padding: 0.25rem;
+
+$large_border_radius: 8px;
+$small_border_radius: 4px;
+
+
+* {
+    box-sizing: border-box;
+    font-family: $font;
+}
+
+// Allow components to fill the viewport height
+html, body {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+}
+
+button {
+    background: linear-gradient($button_color_top, $button_color_bottom);
+    color: $button_color_text;
+    border: 1px solid $button_color_bottom;
+    border-radius: $small_border_radius;
+    padding: $small_padding $large_padding;
+    font-size: 95%;
+
+    &:active {
+        filter: brightness(0.9);
+    }
+}
+
+input {
+    background: linear-gradient($input_shading_color, $background_color);
+    border: 1px solid $input_border_color;
+    border-radius: $small_border_radius;
+    padding: $small_padding $medium_padding;
+    font-size: 95%;
+}
+
+a {
+    text-decoration: none;
+    color: $link_color;
+
+    &:hover {
+        text-decoration: underline;
+        text-underline-offset: 0.3em;
+        text-decoration-thickness: 2px;
+        text-decoration-color: $link_color_underline;
+    }
+}
+
+label {
+    color: $label_color;
+    font-size: 90%;
+}
+
+// For now, remove typography-related "noise"
+h1, h2, h3, h4 {
+    margin: 0;
+    padding: 0;
+}
+
+.error {
+    color: $error_color;
+    font-weight: bold;
+    font-size: 90%;
+}

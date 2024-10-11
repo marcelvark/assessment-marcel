@@ -1,0 +1,34 @@
+@import '../../styles.scss';
+
+#wrapper {
+    background: linear-gradient($dark_color, color-mix(in srgb, $dark_color, #fff 60%));
+
+    // Center the login dialog
+    display: grid;
+    height: 100%;
+
+    #dialog {
+        // Center the login dialog
+        margin: auto;
+
+        background: $background_color;
+        border-radius: $large_border_radius;
+
+        // Align dialog content
+        padding: $medium_padding $large_padding;
+        display: inline-flex;
+        flex-direction: column;
+        gap: $medium_padding;
+
+        div {
+            // Align dialog labels/button and links
+            display: grid;
+            grid-template-columns: 1fr auto;
+            gap: calc(2 * $large_padding);
+
+            a {
+                font-size: 85%;
+            }
+        }
+    }
+}

@@ -1,0 +1,27 @@
+@import '../../styles.scss';
+
+header {
+	background: $dark_color;
+	padding: $medium_padding;
+
+	// Align icon, username, and logout link
+	display: grid;
+	grid-template-columns: 1fr auto auto;
+	gap: $medium_padding;
+	align-items: center;
+
+	img {
+		// Limit the icon height (so the topbar will not grow too large)
+		height: 1.5rem;
+	}
+
+	span {
+		// Make the username a bit lighter
+		color: #fff7;
+	}
+
+	a {
+		color: $link_color_light;
+		text-decoration-color: $link_color_light_underline;
+	}
+}

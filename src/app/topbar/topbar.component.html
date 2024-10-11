@@ -1,0 +1,7 @@
+<header>
+    <img src="/assets/favicon.ico" style="filter: grayscale(1) brightness(10);">
+    @if (isLoggedIn) {
+        <span>{{userName}}</span>
+        <a href="" (click)="logOut($event)">Log out</a>
+    }
+</header>

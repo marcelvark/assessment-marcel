@@ -1,0 +1,12 @@
+// Let <app-root> fill up the whole page
+:host {
+	margin: 0;
+	display: grid;
+	grid-template-rows: auto 1fr;
+	height: 100%;
+}
+
+// Why is <router-outlet> not hidden by default?
+router-outlet {
+	display: none;
+}

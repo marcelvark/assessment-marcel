@@ -1,0 +1,24 @@
+<div id="wrapper">
+    <div id="dialog">
+        <div>
+            <label for="username">Username</label>
+            <a href="#">Sign up</a>
+        </div>
+        <input [(ngModel)]="username" type="text" name="username" placeholder="use 'marcel' to log in">
+
+        <div>
+            <label for="password">Password</label>
+            <a href="#">Forgot password?</a>
+        </div>
+        <input [(ngModel)]="password" type="password" name="password" autocomplete="one-time-code">
+
+        <div>
+            <a href="#">Need an activation code?</a>
+            <button (click)="signIn()">Sign in</button>
+        </div>
+
+        @if (triedLogIn && loginService.loginFailed) {
+            <div class="error">Username or password incorrect</div>
+        }
+    </div>
+</div>

@@ -1,0 +1,19 @@
+@import '../../styles.scss';
+
+// Align the navbar and main content
+:host {
+    display: grid;
+    grid-template-columns: auto 1fr;
+    align-items: stretch;
+}
+
+// Main content
+main {
+    color: $text_color;
+    padding: $large_padding;
+
+    // Basic section group styling
+    section {
+        padding: $medium_padding $medium_padding calc(2 * $large_padding);
+    }
+}
