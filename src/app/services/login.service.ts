@@ -6,7 +6,7 @@ import { from, Observable } from 'rxjs';
  * Mockup data and -functionality for loggin in.
  */
 const MOCKUP = {
-    loginSuccessData: {
+    successData: {
         data: {
             id: 'test',
             username: 'Marcel',
@@ -31,7 +31,7 @@ const MOCKUP = {
         ],
     },
 
-    loginFailedData: {
+    failedData: {
         data: {
             id: null,
             username: '',
@@ -65,12 +65,12 @@ const MOCKUP = {
      * @param password N/A
      * @returns Mockup log in data.
      */
-    logIn(userName: string, password: string) {
+    logIn(userName: string, password: string): Promise<object> {
         return new Promise(function (resolve) {
-            // setTimeout(() => { // to simulate server fetch delay
-                if (userName == 'marcel') resolve(MOCKUP.loginSuccessData);
-                else resolve(MOCKUP.loginFailedData);
-            // }, 1000);
+            setTimeout(() => {
+                if (userName == 'marcel') resolve(MOCKUP.successData);
+                else resolve(MOCKUP.failedData);
+            }, 500);
         });
     },
 };
@@ -104,13 +104,28 @@ export class LoginService {
             this.loginData = response
 
             if (this.loginData.success) {
-                this.loginData = MOCKUP.loginSuccessData;
+                this.loginData = MOCKUP.successData;
                 this.router.navigate(['/dashboard']);
             } else {
-                this.loginData = MOCKUP.loginFailedData;
+                this.loginData = MOCKUP.failedData;
             }
         })
     }
+
+    /*
+        Tried moving the routing out of login.service.ts, 
+        but did not get logIn2 to return a boolean for success or false.
+
+    logIn2(userName: string, password: string): Observable<object> {
+        const observable = from(MOCKUP.logIn(userName, password));
+
+        observable.subscribe((response) => {
+            this.loginData = response
+        })
+
+        return observable;
+    }
+    */
 
     /**
      * Logs out the user, and navigates to the login page.

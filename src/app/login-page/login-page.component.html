@@ -1,5 +1,5 @@
 <div id="wrapper">
-    <div id="dialog">
+    <form (ngSubmit)="onSubmit()">
         <div>
             <label for="username">Username</label>
             <a href="#">Sign up</a>
@@ -14,11 +14,11 @@
 
         <div>
             <a href="#">Need an activation code?</a>
-            <button (click)="signIn()">Sign in</button>
+            <button type="submit">Sign In</button>
         </div>
 
         @if (triedLogIn && loginService.loginFailed) {
             <div class="error">Username or password incorrect</div>
         }
-    </div>
+    </form>
 </div>

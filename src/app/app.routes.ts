@@ -5,12 +5,12 @@ import { DashboardPageComponent } from './dashboard-page/dashboard-page.componen
 export const routes: Routes = [
     {
         path: 'login',
-        title: 'Q90 - Login',
+        title: 'Login',
         component: LoginPageComponent,
     },
     {
         path: 'dashboard',
-        title: 'Q90 - Dashboard',
+        title: 'Dashboard',
         component: DashboardPageComponent,
     },
 ];
