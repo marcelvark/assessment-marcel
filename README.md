@@ -1,11 +1,9 @@
-I created this repository for an assessment that was part of a job application. I had no previous experience with Angular, SCSS, or RXJS. I watched a few tutorials on Angular, and used info from various online sources for the rest.
+I developed this Angular project for a job assessment. Having no prior experience with Angular, SCSS, or RXJS, I used tutorials and online resources to complete it.
 
-The goal was to assess Angular skills; basic setup, creating pages, hooking up (fake) API calls with RXJS, and styling based on a simple design. I had to make a mockup with login functionality, including login- and dashboard pages, using Components as I saw fit. User logged in state needed to be preserved on page reloads. Server-returned data was supplied in JSON format.
+The objective was to demonstrate Angular skills by setting up a project, creating pages, implementing mock API calls using RXJS, and applying custom styling based on a simple design. I had to build a mockup with login- and dashboard pages, and to ensure the user's logged-in state persisted across page reloads. Server data samples were provided in JSON format.
 
-After creating the pages, I added a Service for the login mockup. I applied some RXJS there, but based on my current understanding, I did not see how to use it in a meaningful way. RXJS Server login data is simply stored in sessionStorage.
+To handle the login functionality, I created a Service and opted to store server data in sessionStorage. I used some RXJS there, but avoided more advanced implementations, as they felt out of place for the scope of this assessment.
 
-Using a UI component library was not a part of the assignment, so I chose to stick to SCSS and use the provided styling examples as a starting point. In absence of a UI library I did not add icons either.
+Since using a UI component library wasn't required, I used SCSS for styling, drawing inspiration from the provided design examples. I also chose not to include icons. Adding comments was a part of the assignment. Templates are relatively straightforward, so I chose to mostly comment the CSS and login Service.
 
-Adding good comments was part of the assignment, and I added a bit more than I normally would. The CSS comments are useful I think, but my template files don't need comments yet.
-
-This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 18.0.3.
+This project was generated using Angular CLI version 18.0.3.
