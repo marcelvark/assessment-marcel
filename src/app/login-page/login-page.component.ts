@@ -11,7 +11,6 @@ import { Router } from '@angular/router';
     styleUrl: './login-page.component.scss',
 })
 export class LoginPageComponent {
-    // loggedIn: boolean = true;
     username: string = '';
     password: string = '';
 
@@ -20,20 +19,6 @@ export class LoginPageComponent {
     onSubmit() {
         this.triedLogIn = true;
         this.loginService.logIn(this.username, this.password);
-
-        /*
-            Tried moving the routing out of login.service.ts, 
-            but did not get logIn2 to return a boolean for success or false.
-
-        this.loginService
-            .logIn2(this.username, this.password)
-            .subscribe((response: any) => {
-                this.triedLogIn = true;
-                if (response.success) {
-                    this.router.navigate(['/dashboard']);
-                }
-            });
-        */
     }
 
     constructor(public loginService: LoginService, private router: Router) {}

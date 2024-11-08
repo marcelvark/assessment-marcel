@@ -112,21 +112,6 @@ export class LoginService {
         })
     }
 
-    /*
-        Tried moving the routing out of login.service.ts, 
-        but did not get logIn2 to return a boolean for success or false.
-
-    logIn2(userName: string, password: string): Observable<object> {
-        const observable = from(MOCKUP.logIn(userName, password));
-
-        observable.subscribe((response) => {
-            this.loginData = response
-        })
-
-        return observable;
-    }
-    */
-
     /**
      * Logs out the user, and navigates to the login page.
      */
